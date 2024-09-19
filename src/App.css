@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.whole-page {
+  position: relative;
+  background-image: url("./Assets/pawprintsfish.png");
+  background-size: cover;
   min-height: 100vh;
+  width: 100%;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+.card-body {
+  background-color: #dee9eb;
+  max-width: 25%;
+  padding: 10px;
+  margin-bottom: 2rem;
+  margin-right: 5px;
+  flex-basis: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 3px solid #000;
+  border-radius: 20px;
+}
+.med-carousel-title {
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  margin-right: 450px;
+  margin-left: 450px;
+  background-color: #dee9eb;
+  text-align: center;
+  color: #937070;
+}
+
+.container-carousel {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.card-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.page-title {
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  margin-right: 500px;
+  margin-left: 500px;
+  text-align: center;
+  background-color: #dee9eb;
+  color: #937070;
+  margin-top: 0px;
+}
+
+.card-species {
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  width: 45px;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  background: rgb(221, 173, 173);
+  background: radial-gradient(
+    circle,
+    rgba(221, 173, 173, 1) 0%,
+    rgba(159, 185, 191, 1) 50%,
+    rgba(214, 199, 199, 1) 100%
+  );
+}
+
+.title-learn {
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  margin-right: 450px;
+  margin-left: 450px;
+  text-align: center;
+  background-color: #dee9eb;
+  text-align: center;
+  color: #937070;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.submit-new {
+  border: 2px solid #000;
+  border-radius: 5;
+}
+
+.menubar {
+  padding: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-btns {
+  padding: 5px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  box-shadow: 10px 5px 5px #ddadadf0;
+  margin: 10px;
+  background-color: #aec8ce;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.house {
+  height: 40px;
+  width: 40px;
+}
+
+.pill {
+  height: 40px;
+  width: 40px;
+}
+
+.form-section {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  background-color: #ddadadf0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  padding: 35px;
+  margin: 25px 25px;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 3px;
+  margin-bottom: 0;
+  margin-right: 3px;
+}
+
+.form-required {
+  text-align: center;
+  font-size: 20px;
+  color: red;
+}
+
+.form-labels {
+  font-size: 30px;
+  font-weight: 400;
+  justify-content: space-around;
+}
+
+.btn-newmed {
+  padding: 5px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  margin: 10px;
+  background-color: #aec8ce;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.input-box {
+  font-size: 22px;
+}
+
+input.larger {
+  width: 22px;
+  height: 22px;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  background-color: #ddadadf0;
+  padding: 35px;
+  margin: 25px 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 3px;
+  margin-bottom: 10;
+  margin-right: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.google-btn {
+  padding: 10px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  margin-right: 500px;
+  margin-left: 500px;
+  background-color: #aec8ce;
+  font-size: 20px;
+  box-shadow: 10px 5px 5px #937070;
+  cursor: pointer;
+}
+
+.bust {
+  height: 45px;
+  width: 45px;
 }
