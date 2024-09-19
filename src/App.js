@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddMedication from "./components/Form";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import { useState, createContext } from "react";
 
-function App() {
+export const UserContext = createContext(null);
+
+export default function App() {
+  const [user, setUser] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserContext.Provider value={{ user, setUser }}>
+        <div className="whole-page">
+          <header>
+            <h1 className="page-title">Training Tidbits </h1>
+          </header>
+          <nav>
+            <NavBar />
+          </nav>
+          <body>
+            <h2 className="title-learn">Learning in little bites</h2>
+            <Routes>
+              <Route
+                path="/Form"
+                element={!user ? <Login /> : <AddMedication />}
+              />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </body>
+        </div>
+        <footer> Training Tidbits © Coding with Chole 2024 </footer>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 }
-
-export default App;
